@@ -1,0 +1,27 @@
+<h2>New product saved!</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Weight</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| 
+
+    	user = User.find(product.user_id)
+    	name = user.name
+
+   	%>
+      <tr>
+        <td><%= name %></td>
+        <td><%= product.name %></td>
+        <td><%= product.weight %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -9,6 +9,11 @@ Rails.application.routes.draw do
 
   get 'display/show_where_querystring'
 
+  get 'display/new_product'
+
+  post 'display/create_product'
+
+
   resources :users
 
   resources :products

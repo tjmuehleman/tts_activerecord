@@ -1,0 +1,11 @@
+<h2>Add a new product</h2>
+
+<%=form_tag("/display/create_product") do%>
+	User ID: 
+	<%=number_field_tag :user_id%><br>
+	Name
+	<%=text_field_tag :name%><br>
+	Weight:
+	<%=number_field_tag :weight%><br><br>
+	<%=submit_tag "Save"%>
+<%end%>
